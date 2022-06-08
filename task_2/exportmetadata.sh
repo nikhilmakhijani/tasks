@@ -4,7 +4,7 @@ project_name=$1
 instance_name=$2
 zone_name=$3
 
-if [ -z $project_name ] || [ -z $instance_name ] || [ -z $zone_name ]: then
+if [ -z $project_name ] || [ -z $instance_name ] || [ -z $zone_name ]; then
   echo "One or more required inputs are missing!!! Exiting !!!"
   exit 1
 else
