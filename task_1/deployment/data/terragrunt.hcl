@@ -7,10 +7,10 @@ terraform {
 }
 
 inputs = {
-  project_id            = "hazel-torus-350916"
-  region                = "us-central1"
-  instance_name          = "test-ha"
-  db_version            = "MYSQL_8_0"
-  tier                  = "db-f1-micro"
-  availability_type     = "REGIONAL"
+  project_id        = "hazel-torus-350916"
+  region            = "us-central1"
+  instance_name     = "test-ha"
+  db_version        = "MYSQL_8_0"
+  tier              = "db-f1-micro"
+  availability_type = "REGIONAL"
 }

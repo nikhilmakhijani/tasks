@@ -17,5 +17,5 @@ inputs = {
   load_balancing_scheme = "INTERNAL"
   ig_group              = dependency.mig.outputs.instance_group
   forwarding_rule_name  = "fr-app"
-    
+
 }
