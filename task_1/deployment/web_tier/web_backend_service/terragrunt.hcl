@@ -3,7 +3,7 @@ include {
 }
 
 dependency "mig" {
-  config_path = "/Users/nikhilmakhijani/terraformwork/tasks/task_1/deployment/frontend/frontend_mig/terragrunt.hcl"
+  config_path = "/Users/nikhilmakhijani/terraformwork/tasks/task_1/deployment/web/web_mig/terragrunt.hcl"
 }
 
 terraform {

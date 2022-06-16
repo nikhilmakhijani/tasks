@@ -3,7 +3,7 @@ include {
 }
 
 dependency "instance_template" {
-  config_path = "/Users/nikhilmakhijani/terraformwork/tasks/task_1/deployment/backend/backend_instance_group/terragrunt.hcl"
+  config_path = "/Users/nikhilmakhijani/terraformwork/tasks/task_1/deployment/web/web_instance_group/terragrunt.hcl"
 }
 
 terraform {
@@ -16,16 +16,16 @@ inputs = {
   subnetwork_project = "hazel-torus-350916"
   project_id         = "hazel-torus-350916"
   region             = "us-central1"
-  hostname           = "backend-vm"
+  hostname           = "frontend-vm"
   instance_template  = dependency.instance_template.outputs.self_link
   update_policy      = []
   target_size        = 2
   named_ports = [{
-    name = "backend"
-    port = 8081
+    name = "frontend"
+    port = 8080
     },
   ]
-  health_check_name = "backend-mig-http-hc"
+  health_check_name = "frontend-mig-http-hc"
   health_check = {
     type                = "http"
     initial_delay_sec   = 120
@@ -35,12 +35,13 @@ inputs = {
     unhealthy_threshold = 3
     response            = ""
     proxy_header        = "NONE"
-    port                = 8081
+    port                = 8080
     request             = ""
-    request_path        = "/orders"
+    request_path        = "/"
     host                = ""
+  
   }
-  autoscaler_name     = "backend-mig-autoscaler"
+  autoscaler_name     = "frontend-mig-autoscaler"
   max_replicas        = 3
   min_replicas        = 2
   cooldown_period     = 60

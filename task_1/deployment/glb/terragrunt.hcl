@@ -3,7 +3,7 @@ include {
 }
 
 dependency "backend_service" {
-  config_path = "/Users/nikhilmakhijani/terraformwork/tasks/task_1/deployment/frontend/frontend_backend_service/terragrunt.hcl"
+  config_path = "/Users/nikhilmakhijani/terraformwork/tasks/task_1/deployment/web/web_backend_service/terragrunt.hcl"
 }
 
 terraform {

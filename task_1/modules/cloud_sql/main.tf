@@ -8,8 +8,8 @@ resource "google_sql_database_instance" "this" {
     availability_type = var.availability_type
     backup_configuration {
       enabled            = true
-      binary_log_enabled = true
-      start_time         = "20:55"
+      binary_log_enabled = false
+      start_time         = "21:00"
     }
   }
   deletion_protection = "true"
