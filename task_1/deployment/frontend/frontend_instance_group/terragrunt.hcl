@@ -14,7 +14,7 @@ inputs = {
     email  = "sa-terraform@hazel-torus-350916.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
-  name_prefix  = "web-instance"
+  name_prefix  = "frontend"
   machine_type = "e2-medium"
   disk_type    = "pd-standard"
   metadata = {

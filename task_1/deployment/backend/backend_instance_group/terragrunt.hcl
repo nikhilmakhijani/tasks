@@ -14,16 +14,10 @@ inputs = {
     email  = "sa-terraform@hazel-torus-350916.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
-  name_prefix  = "web-instance"
+  name_prefix  = "backend"
   machine_type = "e2-medium"
   disk_type    = "pd-standard"
   metadata = {
-    startup-script  = <<SCRIPT
-                   !#/usr/bin/bash
-                   apt-get update
-                   apt-get install -y nginx
-                   systemctl start nginx
-                    SCRIPT
     enable-osconfig = "true"
   }
   enable_shielded_vm   = true
